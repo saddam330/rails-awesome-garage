@@ -13,6 +13,9 @@
   </head>
 
   <body>
+    <% if controller.controller_name != 'pages' %>
+      <%= render '/shared/navbar' %>
+      <% end %>
     <%= yield %>
   </body>
 </html>

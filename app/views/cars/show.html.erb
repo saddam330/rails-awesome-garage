@@ -12,6 +12,7 @@
 <% else %>
   <p>This car is already in your Garage</p>
 <% end %>
+<%= link_to 'My Favourites', favourites_path %>
 
 <%= simple_form_for [@car, @review] do |f| %>
 <%= f.input :comment, placeholder: "commnet here" %>
