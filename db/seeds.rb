@@ -8,6 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 puts "Cleaning database...."
+Owner.destroy_all
 Car.destroy_all
 
 puts "Creating owners"

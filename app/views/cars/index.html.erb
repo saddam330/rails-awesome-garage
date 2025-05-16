@@ -1,2 +1,12 @@
 <h1>List Of Cars</h1>
-<%= @cars.brand %>
+<ul class = "list-group">
+      <% @cars.each do |car| %>
+      <li class = "list-group-item">
+      <h1><%= link_to car.brand, car_path(car) %></h1>
+      <h3><%= car.model  %></h3>
+      <p><%= car.created_at.strftime('%e %b %Y %H:%M:%S%p') %></p>
+      <p><%= car.owner.nickname %></p>
+      </li>
+      <% end %>
+</ul>
+<%= link_to 'My Garage', favourites_path %>
