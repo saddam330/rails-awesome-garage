@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  position: relative;
+  .review-section {
+    display: flex;
+  }
+
+  .favourite {
+    color: white;
+    position:absolute;
+    top: -680px;
+
+    p {
+      color: rgb(247, 244, 244);
+      font-weight: 600;
+      &:hover {
+        color: rgb(44, 30, 238);
+      }
+    }
+  }
+
+
+}

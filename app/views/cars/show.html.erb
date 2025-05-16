@@ -1,30 +1,43 @@
-<h1><%= @car.brand %> </h1>
-<h2><%= @car.model %></h2>
-<p><%= @car.fuel %></p>
-<p><%= @car.year %></p>
-<%= link_to 'Back to Home', cars_path %>
-<hr>
-<hr>
-<% if  @car.favourites.empty?%>
-  <%= simple_form_for [@car, @favourite] do |f| %>
-    <%= f.submit 'Save to my Garage', class: 'btn btn-danger' %>
-  <% end %>
-<% else %>
-  <p>This car is already in your Garage</p>
-<% end %>
-<%= link_to 'My Favourites', favourites_path %>
+<div class="container">
+  <div class="card">
+    <%= image_tag(@car.image_url) %>
+    <div class="main">
+      <div class= "car-info">
+        <h1><%= @car.brand %> </h1>
+        <h2><%= @car.model %></h2>
+        <p><%= @car.fuel %></p>
+        <p><%= @car.year %></p>
+      </div>
+      <div class="user-actions">
+        <div class="favourite">
+          <% if  @car.favourites.empty?%>
+            <%= simple_form_for [@car, @favourite] do |f| %>
+              <%= f.submit 'Save to my Garage', class: 'btn btn-danger' %>
+            <% end %>
+          <% else %>
+            <p> Already parked in Garage</p>
+          <% end %>
+        </div>
+        <div class="comment">
+          <%= simple_form_for [@car, @review] do |f| %>
+          <%= f.input :comment, placeholder: "commnet here" %>
+          <%= f.input :rating, collection: 1..5 %>
 
-<%= simple_form_for [@car, @review] do |f| %>
-<%= f.input :comment, placeholder: "commnet here" %>
-<%= f.input :rating, collection: 1..5 %>
+          <%= f.submit "Send", class: "btn btn-secondary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <hr>
 
-<%= f.submit "Send", class: "btn btn-secondary" %>
-<% end %>
-<hr>
-<hr>
-<% @car.reviews.each do |review| %>
-<p><%= review.comment %></p>
-<p><%= '⭐' * review.rating %></p>
-<% end %>
-<hr>
-<hr>
+    <% @car.reviews.each do |review| %>
+    <div class="d-flex ms-4">
+      <p><%= review.comment %></p>
+      <p><%= '⭐' * review.rating %></p>
+    </div>
+     <hr>
+    </div>
+    <% end %>
+
+  </div>
+</div>
