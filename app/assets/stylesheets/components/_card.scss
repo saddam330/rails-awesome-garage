@@ -1,0 +1,50 @@
+
+.card {
+
+  margin: auto;
+  margin-top: 50px;
+  width: 80%;
+  border: 3px solid green;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  img {
+    width: 100%;
+    background-size: center;
+
+  }
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    color: red;
+    font-weight: bolder;
+  }
+  h3,p {
+    color: black;
+  }
+  i, span {
+    color: black;
+    padding: 2px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    p {
+      background: red;
+      width: 60px;
+      text-align: center;
+      border-radius: 40%;
+      color: rgb(247, 243, 243);
+      position: absolute;
+      right: 16px;
+      top: -10px;
+      font-weight: bolder;
+
+    }
+  }
+
+}

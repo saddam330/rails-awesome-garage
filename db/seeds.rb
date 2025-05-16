@@ -20,11 +20,12 @@ ameila = Owner.new(nickname: 'ammi')
 ameila.save
 
 puts "Creating Cars....."
-Car.create!(brand: 'Mercedes', model: 'A-Class Hatchback', year: 2024, fuel: "Unleaded petrol", owner: george)
+Car.create!(brand: 'Mercedes', model: 'A-Class Hatchback', image_url: 'https://images.pexels.com/photos/1429775/pexels-photo-1429775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+   year: 2024, fuel: "Unleaded petrol", owner: george)
 puts "created Mercedes"
-Car.create!(brand: 'Peugeot', model: "308", year: 2017, fuel: 'Unleaded Petrol', owner: lukash)
+Car.create!(brand: 'Peugeot', model: "308", image_url: 'https://images.pexels.com/photos/10358874/pexels-photo-10358874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', year: 2017, fuel: 'Unleaded Petrol', owner: lukash)
 puts 'created Peugeot'
-Car.create!(brand: 'Range Rover', model: "Sports", year: 2025, fuel: 'Diesel', owner: ameila)
+Car.create!(brand: 'Range Rover', model: "Sports", image_url: 'https://images.pexels.com/photos/4062200/pexels-photo-4062200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', year: 2025, fuel: 'Diesel', owner: ameila)
 puts 'created Range Rover'
 
 puts "Finished! Created #{Car.count} Cars.."
