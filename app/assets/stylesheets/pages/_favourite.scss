@@ -1,3 +1,51 @@
-.container {
+.car {
+  margin: auto;
   margin-top: 50px;
+  width: 60%;
+
+  h1 {
+    color: red;
+    font-weight: bolder;
+    font-size: xx-large;
+  }
+  .car-info {
+    background: whitesmoke;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .car-details {
+      display: flex;
+      justify-content: space-between;
+
+    }
+    img {
+      width: 400px;
+      height: auto;
+    }
+    .heading {
+      padding: 15px;
+
+      h2 {
+        color: red;
+        font-weight: bolder;
+      }
+
+      h3 {
+        font-weight: bolder;
+      }
+    }
+
+    a {
+      position: absolute;
+      right: 20px;
+      top: 200px;
+      color: gray;
+    }
+
+
+  }
+
 }
